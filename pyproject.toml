@@ -1,0 +1,24 @@
+[project]
+name = "aiosponsorblock"
+dynamic = ["version"]
+description = "Asynchrnous version of the sponsorblock.py library with some upgrades."
+readme = "README.md"
+authors = [
+    { name = "Vizonex", email = "VizonexBusiness@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.14.0",
+    "msgspec>=0.21.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+
+[tool.setuptools.dynamic]
+version = {attr = "aiosponsorblock.__version__"}
+
+
+[tool.ruff.lint]
+# Upgrade annotations
+select = ["UP045", "UP007", "UP035"]
